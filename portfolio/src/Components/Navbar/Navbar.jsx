@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import userTheme from '../../Context/Theme'
 import useTheme from '../../Context/Theme';
 import Aos from "aos";
 import "aos/dist/aos.css"
-
+import { BiMenu } from 'react-icons/bi'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 const Navbar = () => {
 
+    const [showMenu, setShowMenu] = useState(true);
     const scrollToSection = (sectionId) => {
+
+        console.log(sectionId)
         const element = document.getElementById(sectionId);
+        setShowMenu(false)
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
         }
@@ -40,8 +45,8 @@ const Navbar = () => {
             name: "Testimonials",
             id: 'testimonials',
             link: "/",
-        },    
-          {
+        },
+        {
             name: "Contact",
             id: 'contact',
             link: "/",
@@ -58,9 +63,14 @@ const Navbar = () => {
     }
 
 
+    const handleChangeMenu = () => {
+        setShowMenu(!showMenu);
+    };
+
+
     return (
         <div className='bg-white dark:bg-black dark:text-white dark:shadow-white py-8 shadow-sm z-10 w-full fixed  top-0'>
-            <div className=' max-w-screen-lg mx-auto flex justify-between items-center'>
+            <div className=' max-w-screen-lg mx-auto  justify-between items-center md:flex hidden'>
                 <div className='font-bold'> JAWAD MUGHAL</div>
                 <div>
                     <ul className='flex '>
@@ -90,6 +100,33 @@ const Navbar = () => {
 
 
                 </div>
+            </div>
+
+            <div className='md:hidden flex flex-row w-full justify-between px-10 relative'>
+                <div className='font-bold'> JAWAD MUGHAL</div>
+                <div > {showMenu ? <BiMenu onClick={handleChangeMenu} size={25} /> :
+
+                    <div className='bg-customHeroBg text-black h-screen w-screen absolute  top-0 left-0 p-10'>
+
+                        <div className='flex  justify-between' > <p className='font-bold text-xl'>JAWAD MUGHAL</p>
+
+                            <AiOutlineCloseCircle onClick={handleChangeMenu} size={25} />
+
+                        </div>
+                        <div>
+                            <ul className='flex flex-col    '>
+                                {menuLinks.map((items) => {
+                                    return <li className='mr-8 cursor-pointer hover:text-purple-600 text-xl py-3' onClick={() => {
+                                        scrollToSection(items.id)
+                                        handleChangeMenu()
+                                    }}
+                                    >{items.name}</li>
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+
+                } </div>
             </div>
         </div>
     )

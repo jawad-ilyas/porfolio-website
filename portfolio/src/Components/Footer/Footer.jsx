@@ -40,12 +40,12 @@ const Footer = () => {
                         })}
                     </ul>
                 </div>
-                <div className='flex '>
-                    <FiLinkedin size={30} />
-                    <FiFacebook size={30} />
-                    <FaXTwitter size={30} />
-                    <AiOutlineInstagram size={30} />
-                    <AiOutlineYoutube size={30} />
+                <div className='flex -me-2'>
+                    <a   className='me-2'   href='https://www.linkedin.com/in/jawad-mughal-dev/' target='_blank'><FiLinkedin size={30} /></a>
+                    <a  className='me-2'    href='https://www.facebook.com/jawad.mughal.35977' target='_blank'><FiFacebook size={30} /></a>
+                    <a   className='me-2'   href='https://twitter.com/Jawadmughal_dev' target='_blank'> <FaXTwitter size={30} /></a>
+                    <a  className='me-2'    href='https://www.instagram.com/jawadmughal_dev/' target='_blank'>  <AiOutlineInstagram size={30} /></a>
+                    <a  className='me-2'   >   <AiOutlineYoutube size={30} /></a>
 
 
                 </div>

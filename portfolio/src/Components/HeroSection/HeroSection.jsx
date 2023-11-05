@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
         <div className='h-screen z-10 bg-customHeroBg dark:bg-black dark:text-white'>
 
-            <div className='md:max-w-screen-lg max-w-screen-sm mx-auto pt-24 pb-12 flex items-center flex-col md:flex-row p-6 md:pt-36'>
+            <div className='md:max-w-screen-lg max-w-screen-sm mx-auto pt-24 pb-12 flex items-center flex-col md:flex-row p-10 md:pt-36'>
                 <div className='flex-1 order-2 md:order-1 '>
                     <h6 className='font-semibold text-xl'>Hey, I'm Jawad Mughal</h6>
                     <div className='flex md:flex-col flex-row my-1 md:my-0'>

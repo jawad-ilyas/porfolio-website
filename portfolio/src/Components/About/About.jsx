@@ -17,7 +17,7 @@ const About = () => {
                     <div className='flex-1'>
                         <img src='https://my-awesome-react-project.netlify.app/img/hero_img.png'></img>
                     </div>
-                    <div className='flex-1'>
+                    <div className='flex-1 ps-4 md:ps-0'>
                         <h1 className='text-3xl font-semibold my-4'>About Us
                         </h1>
 

@@ -154,7 +154,7 @@ const Porfolio = () => {
                 <div className='flex justify-between items-center flex-col md:flex-row'>
                     <h1 className='text-3xl font-semibold my-4 dark:text-white py-4'>My Portfolio
                     </h1>
-                    <div className='mb-4 md:mb-0 overflow-x-auto md:overflow-hidden dark:text-white'>
+                    <div className='mb-4 md:mb-0 dark:text-white'>
                         <button onClick={() => setSelectTab("all")} className=' border px-4 py-1 mr-2  border-gray-300 rounded-md'>ALL</button>
                         <button onClick={() => setSelectTab("mobile")} className=' border px-4 py-1 mr-2  border-gray-300 rounded-md'>REACT JS</button>
                         <button onClick={() => setSelectTab("web")} className=' border px-4 py-1 mr-2  border-gray-300 rounded-md'>MERN</button> 
